@@ -1,0 +1,28 @@
+```html
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Fibonacci Series</h2>
+
+    <input type="number" id="num" placeholder="Enter count">
+    <button onclick="fib()">Generate</button>
+    <p id="result"></p>
+
+    <script>
+        function fib() {
+            let n = Number(document.getElementById("num").value);
+            let a = 0, b = 1, c, s = "";
+
+            for (let i = 0; i < n; i++) {
+                s += a + " ";
+                c = a + b;
+                a = b;
+                b = c;
+            }
+
+            document.getElementById("result").innerHTML = s;
+        }
+    </script>
+</body>
+</html>
+```
